@@ -6,6 +6,7 @@ public class gunScroll : MonoBehaviour
 {
     public static gunScroll instance; // Variable intialized to access this script from other scripts
     public List<GameObject> gunPrefabs; // A list of GameObjects representing the different guns
+    public List<GameObject> weapons;
     public float scrollSpeed = 5f; // The speed at which the scroll wheel moves the gun selection
     private int currentGunIndex = 0; // The index of the currently selected gun
 
@@ -22,9 +23,10 @@ public class gunScroll : MonoBehaviour
         // Instantiate the first gun in the list
         Instantiate(gunPrefabs[currentGunIndex], transform.position, transform.rotation, transform);
     }
-
+    public static int number=0;
     void Update()
     {
+        print("number: " + gunSelection.number);
         scrollGun();
         inHandGun();
     }
