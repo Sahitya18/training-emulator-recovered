@@ -11,11 +11,12 @@ public class gunSelection : MonoBehaviour
     }
     private void Update()
     {
-        print("number1234: "+number);
+        
     }
     public void chooseGun(int num)
     {
         number = num;
+        //print("number1234: " + number);
         //gunScroll.number = num;
         //return number;
     }

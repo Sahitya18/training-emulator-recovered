@@ -5,29 +5,36 @@ using UnityEngine.SceneManagement;
 
 public class gameManager : MonoBehaviour
 {
+    public bool gamePause;
+    public GameObject selfCanvas;
     int count=0;
     private void Start()
     {
+        gamePause = false;
         //count = 0;
     }
     private void Update()
     {
-        print("count "+count);
         gunSelector();
     }
-    void gunSelector()
+     void gunSelector()
     {
-        if (Input.GetKey(KeyCode.B))
+        if (Input.GetKeyDown(KeyCode.B))
         {
-            print("2222222222222");
-            SceneManager.LoadScene(2);
-            count++;
-        }
-        if (Input.GetKey(KeyCode.C))
-        {
-            print("hihihihihi");
-            SceneManager.LoadScene(1);
-            count++;
+            if (count % 2 == 0)
+            { 
+                selfCanvas.SetActive(true);
+                Cursor.lockState = CursorLockMode.None;
+                gamePause = true;
+                count++; 
+            }
+            else if (count % 2 != 0)
+            {
+                selfCanvas.SetActive(false);
+                Cursor.lockState = CursorLockMode.Locked;
+                gamePause = false;
+                count++;
+            }
         }
 
 

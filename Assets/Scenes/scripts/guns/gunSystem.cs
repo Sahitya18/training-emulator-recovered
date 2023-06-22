@@ -48,6 +48,7 @@ public class gunSystem : MonoBehaviour
     {
         bulletsLeft = magazineSize;
         myInput();
+        
         //print(headDamage + " " + bodyDamage + " " + legDamage);
         //print("mg size " + magazineSize);
     }

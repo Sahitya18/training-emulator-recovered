@@ -63,7 +63,7 @@ public class enemyspawn : MonoBehaviour
                 //print("killed");
                 enemyKillCounter++;
                 score.scoreValue = enemyKillCounter;
-                print("count enemy "+enemyKillCounter);
+                //print("count enemy "+enemyKillCounter);
  
             }
             // if enemy is alive it will increase the notdead counter and detroy the object
@@ -73,7 +73,7 @@ public class enemyspawn : MonoBehaviour
                 //print("not killed");
                 notdead++;
                 missed.scoreValue = notdead;
-                print("nd " + notdead);
+                //print("nd " + notdead);
                 
             }
             // hault for 2 Second to respawn

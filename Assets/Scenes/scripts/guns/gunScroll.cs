@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,8 +28,14 @@ public class gunScroll : MonoBehaviour
     void Update()
     {
         print("number: " + gunSelection.number);
+        gunChooser();
         scrollGun();
         inHandGun();
+    }
+
+    private void gunChooser()
+    {
+        gunPrefabs[2] = weapons[gunSelection.number];
     }
 
     void scrollGun()
